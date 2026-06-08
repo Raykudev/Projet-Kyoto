@@ -92,7 +92,6 @@ nav {
   position: fixed;
   padding: 20px;
   background-color: var(--light-orange);
-  border-bottom: var(--light-dark-border);
   z-index: 10;
   width: 100%;
   display: flex;
@@ -108,7 +107,6 @@ nav a {
   font-weight: 600;
   font-size: var(--fs-14);
   padding: 10px;
-  /* pour espacer les liens */
   justify-content: center;
 
 }
@@ -172,18 +170,19 @@ nav a {
 
 
 .activites-section {
-    /* On applique le dégradé linéaire sur toute la section de fond */
+    
     background: linear-gradient(to right, #f3cdcd, #f4d3b8); 
-    padding: 0 20px 80px 20px; /* Pas de padding en haut pour que le bloc monte bien */
+    padding: 0 20px 20px 20px; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 }
 
 
 .main-cards-container {
     background-color: var(--almond); 
-    border-radius: 24px;
+    border-radius: 12px 12px 0 0;
     
     max-width: 900px; 
     width: 100%;       
@@ -193,7 +192,7 @@ nav a {
     
     margin-top: -80px; 
     position: relative; 
-    z-index: 10;
+    z-index: 1;
     
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
@@ -284,6 +283,49 @@ nav a {
 .btn-card:hover {
     background-color: var(--dark-base);
     color: var(--active-light-white)
+}
+
+
+.adventure-banner {
+    width: 100%; 
+    height: 275px; 
+    margin-top: -20px;
+    
+    
+    
+    background-image: url('ressources/parallax-large-flou.jpg'); 
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+
+.banner-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style des textes */
+.banner-title {
+    color: var(--light-white);
+    font-size: var(--fs-40); 
+    font-family: var(--base-font);
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.banner-subtitle {
+    color: var(--light-white);
+    font-size: var(--fs-14);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--base-font);
 }
 
 @media (max-width: 768px) {
