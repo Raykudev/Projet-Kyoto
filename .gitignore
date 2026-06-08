@@ -1,0 +1,23 @@
+# Dépendances (les dossiers lourds générés automatiquement)
+node_modules/
+jspm_packages/
+web_modules/
+
+# Fichiers de configuration locale et secrets (À NE JAMAIS PUSH !)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Fichiers systèmes ou de build
+dist/
+build/
+.DS_Store
+Thumbs.db
+
+# Fichiers de configuration d'IDEs ou d'éditeurs (optionnel mais propre)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
