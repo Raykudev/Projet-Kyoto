@@ -29,7 +29,6 @@
   --accent-font: Nunito sans, sans-serif;
 
   /* Font-size */
-
   --fs-12: 0.75rem;
   --fs-14: 0.875rem;
   --fs-16: 1rem;
@@ -43,13 +42,13 @@
   --fs-64: 4rem;
   --fs-72: 4.5rem;
 
-  /* shadows */
+  /* Shadows */
   --light-solid-shadow: 0 2px 0px #111111cc;
   --solid-shadow: 0 2px 0px #111;
   --shadow-sm: 0 2px 4px rgba(17, 17, 17, 0.502);
   --drop-shadow: 1px 1px 0px #1111114d;
 
-  /* gradients */
+  /* Gradients */
   --striped-pinky: repeating-linear-gradient(135deg,
       rgba(106, 100, 100, 0.1) 0px,
       rgba(106, 100, 100, 0.1) 2px,
@@ -61,17 +60,50 @@
   --dark-left: linear-gradient(to bottom left, #252525, #383838);
   --radial-white-beige: radial-gradient(#f1f1f1, #f5f5dc);
 
-
-  /* borders */
+  /* Borders */
   --light-dark-border: 1px solid var(--lighter-dark);
   --dark-thick-border: 2px solid var(--lighter-dark);
 }
-
 
 body {
   font-family: var(--base-font);
   color: var(--dark-base);
   background-color: var(--light-white);
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+nav {
+  position: fixed;
+  padding: 20px;
+  background-color: var(--light-orange);
+  z-index: 100; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--dark-base);
+  font-weight: 600;
+  font-size: var(--fs-14);
+  padding: 10px;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+  padding: 145px 10px 10px;
+  min-height: 700px;
+  background-image: url(./ressources/hero-background-semi-dark.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .titre-1 {
@@ -85,41 +117,6 @@ body {
     0 4px 0px var(--lighter-dark);
   margin-bottom: 20px;
   line-height: 1.1;
-}
-
-
-nav {
-  position: fixed;
-  padding: 20px;
-  background-color: var(--light-orange);
-  z-index: 10;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-
-}
-
-nav a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--dark-base);
-  font-weight: 600;
-  font-size: var(--fs-14);
-  padding: 10px;
-  justify-content: center;
-
-}
-
-.hero-section {
-  padding: 145px 10px 10px;
-  min-height: 700px;
-  background-image: url(./ressources/hero-background-semi-dark.jpg);
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  text-transform: uppercase;
-
 }
 
 .bouton {
@@ -139,14 +136,12 @@ nav a {
 .hero-section img {
   width: 20px;
   margin-left: 10px;
-
 }
 
 .hero-section span {
   font-size: var(--fs-14);
   font-family: var(--base-font);
   font-weight: 600;
-
 }
 
 .bouton-1 {
@@ -168,172 +163,325 @@ nav a {
   background-color: var(--active-crimson);
 }
 
-
+/* ==========================================================================
+   ACTIVITIES SECTION
+   ========================================================================== */
 .activites-section {
-    
-    background: linear-gradient(to right, #f3cdcd, #f4d3b8); 
-    padding: 0 20px 20px 20px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+  background: linear-gradient(to right, #f3cdcd, #f4d3b8); 
+  padding: 0 20px 20px 20px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
-
 
 .main-cards-container {
-    background-color: var(--almond); 
-    border-radius: 12px 12px 0 0;
-    
-    max-width: 900px; 
-    width: 100%;       
-    padding: 60px 40px;
-    text-align: center;
-    
-    
-    margin-top: -80px; 
-    position: relative; 
-    z-index: 1;
-    
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  background-color: var(--almond); 
+  border-radius: 12px 12px 0 0;
+  max-width: 900px; 
+  width: 100%;       
+  padding: 60px 40px;
+  text-align: center;
+  margin-top: -80px; 
+  position: relative; 
+  z-index: 10; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
-
 
 .subtitle {
-    color: var(--gray);
-    font-size: var(--fs-14);
-    margin-bottom: 5px;
-}
-.section-title {
-    font-family: var(--accent-font);
-    font-size: var(--fs-26);
-    color: var(--dark-base);
-    margin-bottom: 40px;
+  color: var(--gray);
+  font-size: var(--fs-14);
+  margin-bottom: 5px;
 }
 
+.section-title {
+  font-family: var(--accent-font);
+  font-size: var(--fs-26);
+  color: var(--dark-base);
+  margin-bottom: 40px;
+}
 
 .cards-list {
-    display: flex;
-    flex-direction: column;
-    gap: 30px; 
-    max-width: 800px; 
-    margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+  max-width: 800px; 
+  margin: 0 auto; 
 }
-
 
 .activity-card {
-    display: flex;
-    background: linear-gradient(#252525, #383838);
-    border-radius: 8px; 
-    padding: 24px;
-    gap: 30px;
-    box-shadow: var(--shadow-sm); 
+  display: flex;
+  background: linear-gradient(#252525, #383838);
+  border-radius: 8px; 
+  padding: 24px;
+  gap: 30px;
+  box-shadow: var(--shadow-sm); 
 }
 
-/* Moitié Image */
 .card-image {
-    flex: 0 0 45%; 
-    height: 280px; 
-}
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    display: block;
-    border-radius: 4px;
+  flex: 0 0 45%; 
+  height: 280px; 
 }
 
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+  border-radius: 4px;
+}
 
 .card-content {
-    flex: 1; 
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    text-align: left; 
-    color: var(--light-white);
+  flex: 1; 
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  text-align: left; 
+  color: var(--light-white);
 }
 
 .card-content h3 {
-    font-size: var(--fs-18);
-    margin-bottom: 15px;
-  
+  font-size: var(--fs-18);
+  margin-bottom: 15px;
 }
 
 .card-content p {
-    font-size: var(--fs-14);
-    color: var(--gray);
-    line-height: 1.5;
-    margin-bottom: 25px;
+  font-size: var(--fs-14);
+  color: var(--gray);
+  line-height: 1.5;
+  margin-bottom: 25px;
 }
 
-
 .btn-card {
-    align-self: flex-start; 
-    background-color: var(--light-white);
-    color: var(--dark-base);
-    padding: 10px 20px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: var(--fs-12);
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    margin-top: 95px;
+  align-self: flex-start; 
+  background-color: var(--light-white);
+  color: var(--dark-base);
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: var(--fs-12);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: auto; 
 }
 
 .btn-card:hover {
-    background-color: var(--dark-base);
-    color: var(--active-light-white)
+  background-color: var(--dark-base);
+  color: var(--active-light-white);
 }
 
-
+/* ==========================================================================
+   ADVENTURE BANNER 
+   ========================================================================== */
 .adventure-banner {
-    width: 100%; 
-    height: 275px; 
-    margin-top: -20px;
-    
-    
-    
-    background-image: url('ressources/parallax-large-flou.jpg'); 
-    background-size: cover;
-    background-position: center;
-    
-
+  width: 100%; 
+  height: 275px; 
+  margin-top: -20px;
+  background-image: url('ressources/parallax-large-flou.jpg'); 
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px 12px 0 0; /* Angles arrondis uniquement en haut */
+  position: relative;
+  z-index: 5;
 }
-
 
 .banner-overlay {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Style des textes */
 .banner-title {
-    color: var(--light-white);
-    font-size: var(--fs-40); 
-    font-family: var(--base-font);
-    margin-bottom: 5px;
-    letter-spacing: 2px;
+  color: var(--light-white);
+  font-size: var(--fs-40); 
+  font-family: var(--base-font);
+  margin-bottom: 5px;
+  letter-spacing: 2px;
 }
 
 .banner-subtitle {
-    color: var(--light-white);
-    font-size: var(--fs-14);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: var(--base-font);
+  color: var(--light-white);
+  font-size: var(--fs-14);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--base-font);
 }
 
+/* ==========================================================================
+   TOURS & PRICING SECTION
+   ========================================================================== */
+.tours-section {
+  width: 100%;
+  background-color: #f7f6e2; 
+  padding: 60px 20px 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.tours-subtitle {
+  color: var(--gray);
+  font-size: var(--fs-14);
+  margin-bottom: 5px;
+}
+
+.tours-title {
+  font-family: var(--accent-font);
+  font-size: var(--fs-26);
+  color: var(--dark-base);
+  margin-bottom: 60px;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.price-card {
+  background-color: var(--light-orange); 
+  border: 1px solid #252525;
+  padding: 30px 20px;
+  width: 260px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-left {
+  transform: rotate(-6deg) translateY(15px);
+}
+
+.card-center {
+  transform: rotate(1deg);
+  z-index: 3; 
+}
+
+.card-right {
+  transform: rotate(5deg) translateY(15px);
+}
+
+.price-card:hover {
+  transform: rotate(0deg) scale(1.03) translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.card-header-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #252525;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.card-header-price h3 {
+  font-size: var(--fs-18);
+  font-weight: 700;
+}
+
+.price {
+  font-weight: 700;
+  font-size: var(--fs-18);
+}
+
+.card-desc {
+  font-size: 11px;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.features-list {
+  list-style: none;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: auto; 
+}
+
+.features-list li {
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+  margin-bottom: 8px; 
+}
+
+.price-check-icon {
+  width: 14px;  
+  height: 14px;
+  object-fit: contain; 
+}
+
+
+.tours-section .btn-btn-tours {
+  display: block;
+  text-align: center;
+  background-color: #ffffff;
+  color: #252525;
+  border: 1px solid #252525;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.tours-section .btn-btn-tours:hover {
+  background-color: #252525;
+  color: #ffffff;
+}
+
+.floor-shadow {
+  width: 100%;
+  max-width: 650px; 
+  height: auto;     
+  margin-top: -10px; 
+  pointer-events: none; 
+  display: block;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================================== */
 @media (max-width: 768px) {
-    .activity-card {
-        flex-direction: column; 
-    }
-    
-    .activity-card:nth-child(2) {
-        flex-direction: column-reverse; 
-    }
+  .activity-card {
+    flex-direction: column; 
+  }
+  
+  .activity-card:nth-child(2) {
+    flex-direction: column-reverse; 
+  }
+
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .card-left, .card-center, .card-right {
+    transform: rotate(0deg) translateY(0); 
+  }
+
+  .floor-shadow,
+  .floor-shadow-img {
+    display: none;
+  }
 }
