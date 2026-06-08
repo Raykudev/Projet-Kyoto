@@ -169,3 +169,135 @@ nav a {
 .bouton-2:hover {
   background-color: var(--active-crimson);
 }
+
+/* ==========================================================================
+   1. LE FOND EN DÉGRADÉ (Rose/Saumon) 
+   ========================================================================== */
+.activites-section {
+    /* On applique le dégradé linéaire sur toute la section de fond */
+    background: linear-gradient(to right, #f3cdcd, #f4d3b8); 
+    padding: 0 20px 80px 20px; /* Pas de padding en haut pour que le bloc monte bien */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ==========================================================================
+   2. LE CONTOUR BEIGE ARRONDI QUI REMONTE (Le Grand Conteneur)
+   ========================================================================== */
+.main-cards-container {
+    background-color: var(--almond); /* Ton beige #f1e3dd */
+    border-radius: 24px;
+    
+    max-width: 900px; /* Largeur maximale de ton bloc */
+    width: 100%;       /* Permet de bien s'adapter sur petit écran */
+    padding: 60px 40px;
+    text-align: center;
+    
+    /* La marge négative pour remonter sur le header */
+    margin-top: -80px; 
+    position: relative; 
+    z-index: 10;
+    
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   3. LES TITRES (Toujours à l'intérieur du bloc beige)
+   ========================================================================== */
+.subtitle {
+    color: var(--gray);
+    font-size: var(--fs-14);
+    margin-bottom: 5px;
+}
+.section-title {
+    font-family: var(--accent-font);
+    font-size: var(--fs-26);
+    color: var(--dark-base);
+    margin-bottom: 40px;
+}
+
+/* Liste des cartes centrée */
+.cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espace vertical entre les cartes */
+    max-width: 800px; /* Pour éviter que la section soit trop large */
+    margin: 0 auto; /* Centre tout le bloc sur l'écran */
+}
+
+/* La Carte Individuelle (Flexbox horizontal) */
+.activity-card {
+    display: flex;
+    background: linear-gradient(#252525, #383838);
+    border-radius: 8px; /* Coins arrondis légers */
+    padding: 24px;
+    gap: 30px;
+    box-shadow: var(--shadow-sm); /* Ton ombre douce */
+}
+
+/* Moitié Image */
+.card-image {
+    flex: 0 0 45%; /* 👈 On fixe l'image à 45% maximum de la largeur pour laisser de la place au texte */
+    height: 280px; /* Ajuste la hauteur pour que l'image soit élancée comme sur Figma */
+}
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image s'adapte sans se déformer */
+    display: block;
+    border-raidus: 4px;
+}
+
+/* Moitié Texte */
+.card-content {
+    flex: 1; /* Prend les autres 50% */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre le texte verticalement */
+    text-align: left; /* Aligne le texte à gauche */
+    color: var(--light-white);
+}
+
+.card-content h3 {
+    font-size: var(--fs-18);
+    margin-bottom: 15px;
+  
+}
+
+.card-content p {
+    font-size: var(--fs-14);
+    color: var(--gray);
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Le bouton blanc de la carte */
+.btn-card {
+    align-self: flex-start; /* Aligne le bouton à gauche sans prendre toute la largeur */
+    background-color: var(--light-white);
+    color: var(--dark-base);
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: var(--fs-12);
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 95px;
+}
+
+.btn-card:hover {
+    background-color: var(--dark-base);
+    color: var(--active-light-white)
+}
+
+@media (max-width: 768px) {
+    .activity-card {
+        flex-direction: column; /* Aligne l'image au-dessus du texte */
+    }
+    /* Optionnel : pour la carte 2, si tu veux que l'image passe aussi au-dessus sur mobile */
+    .activity-card:nth-child(2) {
+        flex-direction: column-reverse; 
+    }
+}
