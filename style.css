@@ -246,7 +246,7 @@ nav a {
     height: 100%;
     object-fit: cover; /* L'image s'adapte sans se déformer */
     display: block;
-    border-raidus: 4px;
+    border-radius: 4px;
 }
 
 /* Moitié Texte */
