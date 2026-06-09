@@ -486,17 +486,20 @@ CONTACT
 }
 
 .contact-subtitle {
-  font-size: 0.9rem;
-  color: #a59285;
+  font-size: var(--fs-16);
+  color: var(--gray);
   display: block;
   margin-bottom: 8px;
+  font-family: var(--base-font);
 }
 
 .contact-title {
-  font-size: 2rem;
+  font-size: var(--fs-24);
   color: #1a1a1a;
   margin-bottom: 30px;
   font-weight: 500;
+  font-family: var(--accent-font);
+  font-weight: bold;
 }
 
 
@@ -510,7 +513,7 @@ CONTACT
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #ffffff 40%, #ffccd5 100%); /* Dégradé blanc vers rose pastel */
+  background: linear-gradient(to right, #ffffff 40%, #ffccd5 100%); 
   border: 1px solid #1a1a1a;
   padding: 16px 24px;
   text-decoration: none;
@@ -526,7 +529,9 @@ CONTACT
 }
 
 .contact-text {
-  font-size: 1rem;
+  font-size: var(--fs-14);
+  font-weight: bold;
+  font-family: var(--base-font);
 }
 
 .contact-icon {
