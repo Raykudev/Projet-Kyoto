@@ -281,7 +281,7 @@ nav a {
   background-image: url('ressources/parallax-large-flou.jpg'); 
   background-size: cover;
   background-position: center;
-  border-radius: 12px 12px 0 0; /* Angles arrondis uniquement en haut */
+  border-radius: 12px 12px 0 0; 
   position: relative;
   z-index: 5;
 }
@@ -428,7 +428,6 @@ nav a {
   object-fit: contain; 
 }
 
-
 .tours-section .btn-btn-tours {
   display: block;
   text-align: center;
@@ -458,31 +457,32 @@ nav a {
   display: block;
 }
 
-/*============================================
-CONTACT
-==============================================*/
-
+/* ==========================================================================
+   CONTACT SECTION
+   ========================================================================== */
 .contact-section {
   position: relative;
-  min-height: 80vh;
-  background-image: url('chemin_vers_ton_image_de_kyoto.jpg'); 
-  background-size: cover;
-  background-position: center;
+  min-height: 80vh; 
+  background-image: url('ressources/tradition-japan.jpg'); 
+  background-size: cover;      
+  background-position: center;  
+  background-repeat: no-repeat; 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 .contact-card {
-  background-color: #f1e4d3; 
-  border: 1px solid #333;
-  border-radius: 24px;
-  padding: 40px 60px;
-  max-width: 550px;
+  background-color: var(--active-almond); 
+  border: 1px solid var(--dark-base);
+  border-radius: 24px;       
+  padding: 40px 40px;
+  max-width: 420px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+  box-sizing: border-box;
 }
 
 .contact-subtitle {
@@ -497,11 +497,9 @@ CONTACT
   font-size: var(--fs-24);
   color: #1a1a1a;
   margin-bottom: 30px;
-  font-weight: 500;
   font-family: var(--accent-font);
   font-weight: bold;
 }
-
 
 .contact-links {
   display: flex;
@@ -514,14 +512,15 @@ CONTACT
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to right, #ffffff 40%, #ffccd5 100%); 
-  border: 1px solid #1a1a1a;
-  padding: 16px 24px;
+  border: 2.5px solid #1a1a1a;    
+  border-radius: 12px;
+  padding: 16px 20px;
   text-decoration: none;
   color: #1a1a1a;
-  font-weight: 500;
+  font-weight: 700;
+  box-sizing: border-box;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 
 .contact-button:hover {
   transform: translateY(-2px);
@@ -532,13 +531,23 @@ CONTACT
   font-size: var(--fs-14);
   font-weight: bold;
   font-family: var(--base-font);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .contact-icon {
-  font-size: 1.3rem;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  object-fit: contain;
+  flex-shrink: 0; 
 }
 
-/* --- Footer --- */
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
 .main-footer {
   background-color: #fce3cc; 
   padding: 15px 20px;
@@ -552,64 +561,4 @@ CONTACT
   text-decoration: underline;
   margin: 0;
   cursor: pointer;
-}
-
-/* --- Section Contact --- */
-.contact-section {
-    position: relative;
-    min-height: 80vh; 
-    
-    
-    background-image: url('ressources/tradition-japan.jpg'); 
-    background-size: cover;      
-    background-position: center;  
-    background-repeat: no-repeat; 
-    
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 20px;
-}
-
-
-.contact-card {
-    background-color: var(--active-almond); 
-    border: 1px solid var(--dark-base);
-    border-radius: 24px;       
-    padding: 40px 60px;
-    max-width: 420px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
-    box-sizing: border-box;
-
-}
-
-/* ==========================================================================
-   MEDIA QUERIES (RESPONSIVE)
-   ========================================================================== */
-@media (max-width: 768px) {
-  .activity-card {
-    flex-direction: column; 
-  }
-  
-  .activity-card:nth-child(2) {
-    flex-direction: column-reverse; 
-  }
-
-  .pricing-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .card-left, .card-center, .card-right {
-    transform: rotate(0deg) translateY(0); 
-  }
-
-  .floor-shadow,
-  .floor-shadow-img {
-    display: none;
-  }
 }
